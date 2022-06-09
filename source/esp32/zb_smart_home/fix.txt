@@ -1,0 +1,13 @@
+#### Smartconfig bug (ESP-IDF v4.4)
+
+## Replace line 124 - 127 in "smartconfig_ack.c" like below
+
+if (setsockopt(send_sock, SOL_SOCKET, SO_BROADCAST, &optval, sizeof(int)) < 0) {
+    ESP_LOGE(TAG,  "setsockopt SO_BROADCAST failed");
+    goto _end;
+}
+
+if (setsockopt(send_sock, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof(int)) < 0) {
+    ESP_LOGE(TAG,  "setsockopt SO_REUSEADDR failed");
+    goto _end;
+}

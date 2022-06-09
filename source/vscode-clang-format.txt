@@ -1,0 +1,9 @@
+{
+    BasedOnStyle: Google,
+    IndentWidth: 4,
+    AlignEscapedNewlines: Right,
+    AlignConsecutiveDeclarations: AcrossComments,
+    AlignConsecutiveAssignments: AcrossComments,
+    AlignConsecutiveBitFields: AcrossEmptyLinesAndComments,
+    AlignConsecutiveMacros: AcrossEmptyLinesAndComments
+}

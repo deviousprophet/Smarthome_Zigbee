@@ -1,0 +1,57 @@
+// gửi lên
+{
+	"action": "provision",
+	"dev_addr": ".." (địa chỉ của thiết bị gửi lên),
+	"dev_type": "Sensor"/"RelayAde"/"Relay3"
+}
+
+{
+	"action": "telemetry",
+	"dev_addr": ".." (địa chỉ của thiết bị gửi lên),
+	"attributes": {
+		"temperature": 25,
+		"humidity": 40,
+		"air_quality" : 0.2
+	}
+}
+
+{
+	"action": "telemetry",
+	"dev_addr": ".." (địa chỉ của thiết bị gửi lên),
+	"status1" : true,
+	..
+}
+
+{
+	"action": "telemetry",
+	"dev_addr": ".." (địa chỉ của thiết bị gửi lên),
+	"status": true,
+	"attributes": {
+		"irms": 25,
+		"vrms": 40,
+		"power" : 0.2
+	}
+}
+
+// gửi xuống
+
+{
+	"action": "command",
+	"command": "permit_join"
+}
+
+{
+	"action": "command",
+	"command": "control",
+	"dev_addr": ".." (địa chỉ của thiết bị gửi lên),
+	"status": false
+}
+
+{
+	"action": "command",
+	"command": "control",
+	"dev_addr": ".." (địa chỉ của thiết bị gửi lên),
+	"status1": false,
+	"status2": false,
+	"status3": false,
+}
